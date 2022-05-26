@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Circular Std Book";
+  src: local("Circular Std Book"), local("CircularStd-Book"), url("../fonts/CircularStd-Book.woff2") format("woff2"), url("../fonts/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd-Book.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Circular Std Book";
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.container {
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 45px 0;
+}
+header .container {
+  justify-content: space-between;
+}
+header .header__search-section .header__company-logo {
+  margin-right: 140px;
+}
+header .header__search-section .header__search-icon {
+  margin-right: 20px;
+}
+header .header__search-section .header__search input {
+  border-color: transparent;
+  color: #000000;
+  opacity: 0.2;
+}
+header nav .header__navi-menu-list {
+  gap: 20px;
+}
+header nav .header__navi-menu-list a {
+  padding-bottom: 7px;
+}
+header nav .header__navi-menu-list a:hover {
+  border-bottom: black 3px solid;
+}
+
+@media (max-width: 1360px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 22px;
+  }
+  body header .container {
+    max-width: 768px;
+  }
+  body header .container .header__navi-menu-list {
+    justify-content: space-between;
+  }
+  body header .container .header__search-section, body header .container .header__navi-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 26px;
+  }
+  body .container {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

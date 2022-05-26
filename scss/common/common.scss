@@ -1,0 +1,23 @@
+body{
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Circular Std Book';
+  font-size:17px;
+  line-height: 22px;
+}
+.container{
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+ul{
+  list-style: none;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+a{
+  text-decoration: none;
+  color: black;
+}

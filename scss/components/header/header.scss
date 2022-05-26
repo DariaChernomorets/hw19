@@ -1,0 +1,34 @@
+header {
+  padding: 45px 0;
+  .container {
+    justify-content: space-between;
+  }
+
+  .header__search-section {
+    .header__company-logo {
+      margin-right: 140px;
+    }
+    .header__search-icon{
+      margin-right: 20px;
+    }
+    .header__search{
+      input{
+        border-color:transparent;
+        color: #000000;
+        opacity: 0.2;;
+      }
+    }
+  }
+
+  nav {
+    .header__navi-menu-list {
+      gap: 20px;
+    }
+    .header__navi-menu-list a{
+      padding-bottom: 7px;
+    }
+    .header__navi-menu-list a:hover{
+      border-bottom: black 3px solid;
+    }
+  }
+}
