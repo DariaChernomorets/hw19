@@ -1,10 +1,12 @@
-header {
+.header {
   padding: 45px 0;
   .container {
-    justify-content: space-between;
+    .row {
+      justify-content: space-between;
+    }
   }
 
-  .header__search-section {
+  &__search-section {
     .header__company-logo {
       margin-right: 140px;
     }
